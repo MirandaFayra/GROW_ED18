@@ -1,0 +1,77 @@
+body {
+  background-color: lightsalmon;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.layoutLeft {
+  background-color: gray;
+  text-align: center;
+  height: 75vh;
+  width: 25%;
+}
+.layoutRight {
+  text-align: center;
+  background-color: lightgray;
+  height: 75vh;
+  width: 70%;
+}
+
+.titlePage {
+  text-align: center;
+  /* margin-left: 54px;     */
+}
+
+h1 {
+  padding: none;
+}
+
+/* padding left title */
+
+/* #paddingTitle {
+padding-left: 24px;
+
+} */
+
+/* links */
+.pikachuLink:hover {
+  color: yellow;
+}
+.squirtleLink:hover {
+  color: blue;
+}
+
+.imgConfig300 {
+  height: 300px;
+  padding: 0 275px;
+}
+
+.powerStyle {
+  /* height: 72px; */
+  /* width: 200px; */
+  /* padding: 0 100px; */
+  text-align: center;
+  margin: auto 150px;
+  /* height: 72px; */
+  line-height: 72px;
+}
+
+.waterStyle {
+  background-color: lightskyblue;
+  color: black;
+}
+
+.electricStyle {
+  background-color: yellow;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
