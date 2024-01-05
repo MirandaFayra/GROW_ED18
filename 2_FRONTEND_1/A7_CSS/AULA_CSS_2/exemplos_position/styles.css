@@ -1,0 +1,91 @@
+/*
+ ESTILIZAR POR : 
+
+ tag : 
+
+ tag{
+    estilizacao
+ }
+
+ body{
+    background-color: red;
+ }
+------
+ classe :
+
+ .nomeDaClasse{
+    background-color: red;
+ }
+------
+ id: 
+
+ #nomeDoId{
+    background-color: red;
+ }
+
+*/
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: cornsilk;
+    color: blue;
+}
+
+/*
+.box-orange {          
+    background: orange;
+    height: 100px;
+    width: 100px; 
+    color: white;      
+}
+*/
+  
+.box-blue {
+    background: lightskyblue;
+    height: 100px;
+    width: 100px; 
+    position: static;   
+}
+
+
+/*
+.box-red {
+    position: relative;  
+    background: red;
+    width: 100px;
+    height: 100px;
+   
+}  
+*/
+
+  
+/* EXEMPLO COM ABSOLUTE - se comportam como se o elemento tivesse sido completamente removido da página da web*/ 
+
+/*
+.box-orange {
+    position: absolute;
+    background: orange;
+    width: 100px;
+    height: 100px;
+}
+*/
+
+/* EXEMPLO COM ABSOLUTE - se comportam como se o elemento tivesse sido completamente removido da página da web - APARECER O AZUL */
+
+
+.box-orange {
+    position: absolute;
+    background: orange;
+    width: 100px;
+    height: 100px;
+    left: 30px;
+    top: 50px;
+}
+
+.box-red {
+    position: fixed;  
+    background: red;
+    width: 100px;
+    height: 100px;
+    top: 680px;
+}

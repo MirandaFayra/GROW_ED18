@@ -1,0 +1,73 @@
+ESQUENTANDO O CAFÉ : 
+
+- Pegar o problema => entender possíveis soluções => criar passos lógicos => transformar um algoritimo => transformar em código 
+
+1. Pegar o Problema : Desejo tomar um café pra acordar 
+
+2. Possíveis solução : Sair para comprar um café | Fazer café solúvel | Passar um café no coador 
+
+3. Transformar em algoritmo : 
+
+PASSO 0: Pegar o pó de café 
+PASSO 1: Pegar o bule com o coador
+PASSO 2 - Esquentar a água até atingir 90 a 96 graus
+PASSO 3 - Antes da agua iniciar fervura, pegar a chaleira de agua quente pelo cabo 
+PASSO 4 - Coar o café - Colocar a água quente no café
+PASSO 5 -Pegar uma xícara
+PASSO 6 - Servir o café na xícara
+PASSO 7 - Esperar o café dar uma esfriada e Beber o café
+
+------------
+
+
+- No nosso dia a  dia usamos a lógica e esse passo a passo nas atividade rotineiras, uma vez que já acostumamos 
+
+- Pensamento Lógico => É uma das etapas mais importantes quando estamos programando , definir de forma correta e detalhada o que deve ser feito é super importante. 
+
+- O computador só fará o que como mandarmos 
+
+- Então o principal passo é  ENTENDER PRIMEIRO O PROBLEMA => PROCURAR AS POSSÍVEIS SOLUÇÕES 
+
+- Sequencia de passos lógicos => encadeamento lógico => Lógica de Programção 
+
+- Descriçao de como fazer => Algoritimo
+
+-----------
+
+- Um algoritmo é uma sequência finita de instruções que, quando executadas, produzem um resultado desejado. 
+
+- As instruções podem ser simples ou complexas, e podem ser escritas em uma variedade de linguagens, incluindo linguagem natural, linguagem formal e linguagem de programação.
+
+--------
+
+- Linguagem de Baixo nivel :  mais próximas a uma linguagem de máquina (binário, zero e um) que percebe mais o hardware do que o software em si
+
+
+- Linguagem de alto nivel :  maior proximidade com a linguagem humana
+
+- A lingaugem de alto nivel (mais próxima ao do ser humano) precisa ser traduzida para linguagem de baixo nível pois o nosso computador só entende zero  e um ; 
+
+- Copilação : Traduzir o código de uma linguagem para outra => Copilar traduzir de uma para outra linguagem 
+
+- Interpretação : Analisar linha por linha (instrução por instrução ) e já executa automaticamente 
+
+
+- Javascript => Linguagem interpretada pelo o navegador por meio do Node.js 
+
+- Ecmascript => ECMAScript foi originalmente desenvolvido pela Netscape Communications Corporation => intuito de especificar e normatizar o JS 
+
+- JS => Front | back | full| jogos | mobile | vr 
+
+- Javascript = peca quando falamos de de tipos das nossas variáveis, perdendo o controle dos dados e criando diversos bugs e aceitando várias possibilidades . 
+
+
+- Typescript => Não é uma linguagem , mais sim um superset . Ou seja ele adiciona a tipagem ao JS 
+
+- Codigo Typescript => traduz para JavaScript (transpilar)=> código lido pelo o navegador 
+
+
+------------
+
+
+
+
