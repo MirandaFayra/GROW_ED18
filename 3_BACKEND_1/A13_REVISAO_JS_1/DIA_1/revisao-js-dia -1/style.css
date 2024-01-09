@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+nav  ul {
+  background-color: blueviolet;
+}
+
+/*
+
+- TAMANHO DE FONTE 
+
+EM X REM => UNIDADES RELATIVAS 
+
+- EM : Pai imediato => 16px pai => 1em o filho tem 16px
+
+- REM : Elemento raiz do documento => 20px a raiz , e vc falar que é 1rem => 20px
+
+----------
+
+- VH X VW  (VIEW PORT)
+
+-VH => RELACAO A ALTURA DA VIEWPORT
+- VW => RELACAO A LARGURA DA VIEWPORT 
+
+- WIDTH : 10vw; | HEIGHT : 10vh;
+
+
+- responsividade | layout flexiveis | menos manutencao 
+
+----------
+
+% => RELATIVO AO ELEMENTO PAI e não a view port (não vai ser relativo em relacao a janela do navegador)
+
+
+-----
+
+
+*/
+
+aside {
+  width: 300px;
+  height: 100vh;
+  background-color: lightskyblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*Classe */
+#nome-id{
+  background-color: blue;
+}
+
+/*Classe */
+.foto-perfil {
+  margin-top: 100px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.menu {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  margin: 10px;
+}
+
+li:hover {
+  transform: translateY(-2px) translateX(2px);
+  text-shadow: 2px 1px 4px #000000;
+  transition: 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  font-size: 18px;
+}
+
+a:hover {
+  transform: translateY(-3px) translateX(3px);
+  color: white;
+  transition: 0.2s;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px;
+}
+
+.nome {
+  margin-top: 100px;
+}
+
+span {
+  color: blue;
+}
+
+.nome h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+}
+
+.nome a:hover {
+  color: lightseagreen;
+}
+
+.midia-social img {
+  margin-top: 50px;
+  width: 45px;
+  padding-left: 20px;
+}
+
+.conhecimentos {
+  color: black;
+  margin-top: 100px;
+  margin-left: 0;
+}
+
+p {
+  margin-top: 15px;
+  margin-right: 300px;
+  margin-left: 100px;
+  font-size: large;
+}
+
+article {
+  margin-top: 100px;
+}
