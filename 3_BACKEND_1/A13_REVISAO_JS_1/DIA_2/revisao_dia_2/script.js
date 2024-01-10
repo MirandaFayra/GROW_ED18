@@ -9,7 +9,7 @@ console.log('Olá turma !')
 
 
 while (condição verificada){
-    //comandos que serão executados enquanto ocondição verificada for igual a verdadeiro (true)
+    //comandos que serão executados enquanto condição verificada for igual a verdadeiro (true)
 }
 
 */
@@ -17,9 +17,90 @@ while (condição verificada){
 
 //------------------  EXERCICIO 1 WHILE --------------------
 
+// Imprimir um número de 1 a 10 
+
+/*
+
+let contador = 1
+
+while(contador <= 10){
+    //bloco de código que roda se a condicao for verdadeira
+    console.log(contador)
+    contador ++
+}
+
+*/
+
 //------------------  EXERCICIO 2 WHILE --------------------
 
+// Pergutar um número para pessoa usuária e imprimir do zero ao número perguntado 
+/*
+let numeroPerguntado = Number(prompt('Digite o número que você deseja verificar'))
+
+let contador = 0
+
+// 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+while(contador <= numeroPerguntado){
+    console.log(contador)
+    contador ++
+}
+*/
+
+
 //------------------  EXERCICIO 3 WHILE --------------------
+
+/* Faça um programa que pergunte para a pessoa usuário um número desejado , e pergunte sim ou não se deseja imprimir o número. Caso a resposta escolhida seja sim, imprimir o número de zero até o número. Se a resposta escolhida for não dar a seguinte mensagem : "Você não digitou nenhum número"
+
+*/ 
+
+let numeroDesejado = Number(prompt('Digite o número que você deseja imprimir '))
+
+let desejaImprimir = confirm(`Deseja imprimir de zero ao ${numeroDesejado}`)
+
+let contador = 0 
+
+console.log(desejaImprimir)
+
+
+if (desejaImprimir === true) {
+    while(contador <= numeroDesejado){
+        console.log(contador)
+        contador ++
+    }
+} else {
+    console.log("Você não digitou nenhum número")
+}
+
+
+/*
+
+- Verificar o número 
+- If aninhado 
+- typeof e passar letaras 
+
+if(numeroDesejado > 0 && numeroDesejado<=50){
+    if (numeroDesejado && numeroDesejado !==2) {
+        while(contador <= numeroDesejado){
+            console.log(contador)
+            contador ++
+        }
+    } else if(numeroDesejado === 2) {
+       console.log('Caiu aqui no caso do 2')
+    } else {
+        console.log("Você não digitou nenhum número")
+    }
+}else{
+    console.log(typeof(numeroDesejado))
+    alert('O número deve estar entre 0 e 50')
+}
+*/
+
+
+
+
+
+
 
 
 //------------------------------------------------------
