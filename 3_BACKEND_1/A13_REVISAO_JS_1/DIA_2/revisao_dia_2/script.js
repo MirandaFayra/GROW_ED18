@@ -54,14 +54,15 @@ while(contador <= numeroPerguntado){
 
 */ 
 
+/*
 let numeroDesejado = Number(prompt('Digite o número que você deseja imprimir '))
 
 let desejaImprimir = confirm(`Deseja imprimir de zero ao ${numeroDesejado}`)
 
+
 let contador = 0 
 
-console.log(desejaImprimir)
-
+console.log(desejaImprimir) // funcionamento do confirm 
 
 if (desejaImprimir === true) {
     while(contador <= numeroDesejado){
@@ -72,6 +73,23 @@ if (desejaImprimir === true) {
     console.log("Você não digitou nenhum número")
 }
 
+*/
+/*
+
+- To lower case  e To upper Case
+
+let desejaImprimir = prompt(`Deseja imprimir de zero ao ${numeroDesejado} ? Sim ou Não`).toLowerCase()
+
+
+if (desejaImprimir === 'sim') {
+    while(contador <= numeroDesejado){
+        console.log(contador)
+        contador ++
+    }
+} else {
+    console.log("Você não digitou nenhum número")
+}
+*/
 
 /*
 
@@ -98,11 +116,6 @@ if(numeroDesejado > 0 && numeroDesejado<=50){
 
 
 
-
-
-
-
-
 //------------------------------------------------------
 
 /* DO WHILE 
@@ -120,7 +133,23 @@ do{
 
 //------------------  EXERCICIO 1 DO WHILE -----------------
 
+// Pergutar um número para pessoa usuária e imprimir do zero ao número perguntado 
+
+/*
+let numeroPerguntado = Number(prompt('Digite o número que você deseja imprimir '))
+
+let contador = 0 
+
+do{
+    console.log(contador)
+    contador ++
+
+}while (contador <= numeroPerguntado)
+*/
+
 //------------------  EXERCICIO 2 DO WHILE -----------------
+
+
 
 //------------------------------------------------------
 
@@ -143,4 +172,28 @@ for (inicialização; condição; expressãoFinal) {
 
 //------------------  EXERCICIO 1 FOR -----------------
 
+// Pedir um número para a pessoa usuária e imprimir a somatória dos números (do zero ao número em si)
+
+/*
+let soma = 0 
+let numeroParaSoma = Number(prompt('Digite um número que você deseja somar'))
+
+for(let i = 0 ; i <= numeroParaSoma ; i++){
+    soma += i
+}
+console.log(soma)
+*/
+
+
 //------------------  EXERCICIO 2 FOR -----------------
+
+// Peça um número para pessoa usuária  e imprima de zero a esse número 
+
+
+let numeroPedido = Number(prompt('Digite um número  a ser impresso'))
+
+let contador = 0
+
+for (contador ;contador <= numeroPedido;contador ++ ){
+    console.log(contador)
+}
