@@ -51,3 +51,22 @@ for (let i = 0; i < arrayNomes.length; i++) {
 //----------------------- FOR OF -----------------------
 
 //----------------------- FOR  EACH  -----------------------
+
+
+//----------------------- EX PRÁTICO  -----------------------
+
+/* 
+
+
+Vamos criar um programa para gerenciar os animais de zoologico. Para isso considere os itens a baixo : 
+
+a-) Crie uma lista para armazenar os animais 
+b-) Crie um novo animal com as seguintes propriedades : nome, cor, peso, pais_origem, alimentacao, idade
+c-) Crie 5 animais a partir de uma cópia do animal do item anterior ; 
+d-) Guarde esses animais na lista de animais ;
+c-) Imprima as informacoes do segundo animal da lista.
+
+
+
+
+*/
