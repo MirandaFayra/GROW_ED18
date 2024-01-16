@@ -171,14 +171,61 @@ console.log('Esse é o novo carro 4 ',carro4)
 
 //inserir um objeto no array 
 
+let listaDecarros = [] 
+console.log(listaDecarros)
+
+listaDecarros.push(carro)
+console.log(listaDecarros)
+
+listaDecarros.push(carro2, carro3,carro4)
+
+console.log(listaDecarros)
+
 // Imprimir itens do array 
+
+console.log(listaDecarros[1])
 
 
 //----------------------- FOR  -----------------------
 
+//- Quantidade de iteracoes 
+// Foca no indice e nao no próprio elemento em si
+
+/*
+for(let i = 0; i<listaDecarros.length; i++){
+    let item = listaDecarros[i]
+    console.log('Essa é a variável carro',item)
+    console.log(`Os carros que temos em nosso sistem são ${item.modelo}`)
+}
+*/
+
+
 //----------------------- FOR OF -----------------------
 
+/*
+
+for(const ITEM of ARRAY){
+    //TRECHO CÓDIGO QUE QUEREMOS QUE SE REPITA.
+}
+*/ 
+
+/*
+for(const item of listaDecarros){
+    console.log(`Os carros que temos em nosso sistem são ${item.modelo}`)
+}
+*/
+
 //----------------------- FOR  EACH  -----------------------
+
+/*
+array.forEach((item)=>{
+    // o que queremos que faça o nosso código
+})
+*/
+
+listaDecarros.forEach((item)=>{
+    console.log(`Os carros que temos em nosso sistem são ${item.modelo}`)
+})
 
 
 //----------------------- EX PRÁTICO  -----------------------
