@@ -215,5 +215,5 @@ numbers.splice(1,0, 'Bananinha', 'Moranguinho')
 
 numbers.splice(1,0, 'Bananinha', 'Moranguinho')
 
-
+console.log('ensinando pr pela id') 
 
