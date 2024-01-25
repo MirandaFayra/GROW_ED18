@@ -1,0 +1,1 @@
+// app.METHOD(PATH, HANDLER) => https://expressjs.com/pt-br/starter/basic-routing.html
