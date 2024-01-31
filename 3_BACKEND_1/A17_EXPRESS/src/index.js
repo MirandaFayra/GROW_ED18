@@ -62,9 +62,12 @@ app.post('/',(req, res)=>{
     res.status(201).json({
         message: `Pessoa usuária criada com sucesso! O nome é :${pessoaUsuaria.nome}, o e-mail é ${pessoaUsuaria.email}`
     })
-
 })
+
 
 app.listen(8080,()=>console.log('Servidor iniciado'))
 
 // http://localhost:8080
+
+
+
