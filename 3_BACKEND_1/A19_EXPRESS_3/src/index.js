@@ -31,6 +31,7 @@ app.get("/", (req, res) => {
 
 
 //------------ CRIA PRODUTO (CREATE) -------------
+// app.metodo(endereco, middleware, fucao )
 
 app.post("/products", validateProduct, (req, res) => {
   const data = req.body
@@ -63,12 +64,55 @@ app.get("/products", (req, res) => {
 
 //----------- ATUALIZA PRODUTO (UPDATE) -----------
 
+app.put("/product/:productId",validateProduct,(req,res)=>{
+  const data = req.body
 
+  const productId = Number(req.params.productId)
+  const name = data.name // igual = req.data.name
+  const price = data.price
 
+  const productIndex = products.findIndex(product => product.id === productId)
 
+  if(productIndex !== -1){
+    //const nomeDoMeuProduct = array[indice]
+    //console.log(`Esse é o productIndex ${productIndex}`) // posicao
+    //console.log(`Esse é o products[productIndex] ${products[productIndex]}`) // valor do elemento naquela posicao
+
+    const product = products[productIndex]
+    product.name = name
+    product.price = price
+
+    res.status(200).json({
+      message: "Produto atualizado com sucesso!"
+    })
+  }else{
+    return res.status(404).json({
+      message: "Produto não encontrado"
+    })
+  }
+
+})
 
 //------------ DELETA PRODUTO (DELETE) ------------
 
+app.delete("/produtos/:productId",(req,res)=>{
+  const productId = Number(req.params.productId)
+
+  const productIndex = products.findIndex(product => product.id === productId)
+
+  if(productIndex !== -1){
+    const product = products[productIndex] 
+    const deletedProduct = products.splice(productIndex,1)
+    res.status(200).json({
+      message: "Produto deletado com sucesso!",
+      deletedProduct
+    })
+  }else{
+    return res.status(404).json({
+      message: "Produto não encontrado, impossível apagar!",
+  })
+  }
+})
 
 
 //------------ CRIA ADMINISTRADOR (SIGNUP) ------------
@@ -127,12 +171,82 @@ app.get("/admins", (req, res) => {
 
 //------------ CRIA ADMINISTRADOR CRIPTOGRAFADO ----------
 
+app.post("/signup/crypto",async(req, res) => {
+
+  const data = req.body 
+  const email = data.email 
+  const password = data.password
+
+  const emailAlreadyExists = admins.find(admin => admin.email === email)
+
+  //Verificacao para o email se o email já existir
+  if(emailAlreadyExists){
+    return res.status(400).json({
+      message: 'Email já cadastrado'
+    })
+  }
+
+  // Constante que vai criptografar a senha 
+  const hashPassword = await bcrypt.hash(password  , 10)
+
+  console.log(hashPassword) 
+
+  admins.push({
+    id: nextId,
+    email: data.email,
+    password: hashPassword,
+  })
+
+  nextId ++
+
+  res.status(201).json({
+    message: 'Pessoa administradora cadastrada'
+  })
+});
+
 
 
 
 //------------ LOGIN ADMINISTRADOR  (LOGIN) ------------
 
+app.post("/login",async(req,res)=>{
 
+   //const {email,password} = req.body // req.body.email | req.body.password 
+
+   const data = req.body
+
+   const email = data.email
+   const password = data.password
+
+   // Verificando se o usuário tá banco de dados . Pesquisar pelo email , pois só podemos ter um email no banco
+   const user = admins.find(user => user.email === email )
+  
+   // Criptografar a senha criptografa 
+   const hashPassword = await bcrypt.hash(password  , 10)
+
+   // Comparar a senha que está criptografada com a senha que o usuário
+   const passwordMath = await bcrypt.compare(password, hashPassword )
+
+   //Verificar a senha 
+   if(!passwordMath){
+    return res.status(400).json({
+      message: 'Credencial invalida'
+    })
+   }
+
+   //Verificar o email 
+   if(!user){
+    return res.status(400).json({
+      message: 'Usuário não encontrado'
+    })
+   }
+
+   res.status(200).json({
+    message: "Login bem sucedido",
+    email
+   })
+
+})
 
 
 
