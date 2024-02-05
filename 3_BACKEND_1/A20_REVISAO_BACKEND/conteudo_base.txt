@@ -1,0 +1,173 @@
+NODE 
+
+- Tornou possível o uso do JS do lado do servidor (backend)
+
+- Utiliza a engine V8 criada pelo Google para interpretar o
+código JS
+
+- Rápido crescimento e adoção pela comunidade dada sua
+performance e facilidade de uso
+
+- node nome_do_arquivo.js => executa arquivo js 
+
+
+- Outra forma de gerenciar os pacotes é com yarn 
+
+- Não estamos mais no navegador
+
+- Não temos acesso aos métodos nativos do navegador,
+tais como: alert, confirm, prompt e localStorage
+
+-----------------------------
+
+Package.json
+
+- Fica na pasta raiz do projeto ;
+
+- Guarda informações e configurações, tais como: o nome
+do projeto, quem criou, as dependências e os scripts
+
+- Os scripts podem ser executados com o comando:
+yarn run nom_Do_Script
+
+-----------------------------
+
+Criando o Package.json
+
+- yarn init -y : cria um package.json (com valores
+padrão)
+
+
+-----------------------------
+
+Dependências X DevDependências 
+
+Dependencies
+- Dependências para que o projeto seja executado
+
+DevDependencies
+- Dependências para que o projeto seja desenvolvido
+
+
+-----------------------------
+
+Criando Scripts Personalizados 
+
+- Para criar um script que rode um trecho de código personalizado, deve-se adicionar o novo script seguindo a estrutura de json , dentro do script 
+
+scripts": {
+ "test": "echo \"Error: no test specified\" && exit 1",
+ "meuScriptPersonalizado": "trecho de código que você quer executar"
+},
+
+--------
+
+
+EX 1 
+
+Crie um novo package.json e um arquivo somaNumeros.js .
+Crie um script personalizado chamado soma. Passe os
+números 5 e 10 como argumentos e imprima a somatória
+desses dois números no terminal.
+
+
+-----------------------------
+
+
+NODEMON E SUNCRASE 
+
+- Nodemon , monitora  as alteração nos arquivos , recarregando o servidor automaticamente . 
+
+- adicionar os dois arquivos => yarn add -D nodemon suncrase
+
+- Criar o arquivo nodemon.json manualmente e colocar a linha a seguir :
+
+
+{
+  "execMap": {
+    "js": "node -r sucrase/register"
+  }
+}
+
+
+-----------------------------
+
+
+EXPRESS 
+
+Express é uma lib amplamente utilizada para criação de API's
+
+- A criação de endpoints segue o padrão:
+app.method(path, handler)
+
+- Recebe dois parâmetros: o primeiro representando
+a requisição e o segundo, a resposta
+
+
+-----------------------------
+
+CONFIGURAÇÕES DO EXPRESS
+
+Instalar e depois fazer essas configs => 
+
+yarn add express 
+yarn add cors
+
+----
+
+
+import express from 'express'
+import cors from 'cors'
+
+const app = express()
+app.use(express.json())
+app.use(cors())
+
+app.listen(3003, () => {
+ console.log("Server is running in http://localhost:3003");
+});
+
+
+------
+
+Criando o primeiro endpoint 
+
+app.method(path, handler)
+
+app.get('/', (req: Request, res: Response) => {
+ res.send('Hello, world!')
+})
+
+
+-----------------------------
+
+Request e Response
+
+As principais propriedades do parâmetro req representam as
+diferentes formas pelas quais podemos enviar dados:
+
+● req.headers - Parâmetros de cabeçalho => Usamos em autenticação pegar token, validar token etc... => https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers
+
+
+-------
+
+● req.body - Parâmetros de corpo => Usamos para criar recurso, atualizar recurso etc... Os dados geralmente são enviados em formato Json => https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Messages 
+
+
+--------
+
+● req.query - Parâmetros de consulta => Vem após o ? . Geralmente usado para filtrar, ordenar, paginar e personalizar a resposta.
+
+
+--------
+
+● req.params - Parâmetros de caminho => Vem da url e normalmente é usado para IDs e  identificar recursos específicos na API, para acessando um item especifico
+
+-----------------
+
+Configurações de Resposta 
+
+- res.status(n) - envia uma resposta com status n
+- res.send(x) - responde a requisição com o objeto x
+- res.end() - encerra a requisição sem um body na resposta
+
