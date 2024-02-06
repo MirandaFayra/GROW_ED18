@@ -167,7 +167,7 @@ diferentes formas pelas quais podemos enviar dados:
 
 Configurações de Resposta 
 
-- res.status(n) - envia uma resposta com status n
+- res.status(n) - envia uma resposta com status code n
 - res.send(x) - responde a requisição com o objeto x
 - res.end() - encerra a requisição sem um body na resposta
 
