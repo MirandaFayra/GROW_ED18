@@ -11,6 +11,7 @@ app.listen(3003, () => {
     console.log("Server is running in http://localhost:3003");
 })
 
+
 // cliente pede e passa dado (parametros) => Request
 // servidor responde e devolve status e resposta => Response
 
@@ -37,6 +38,10 @@ app.get('/',(req,res)=>{
 // Endpoint para criar aluno  - CREATE 
 
 const alunos = []
+
+// input nome 
+//input email 
+//subit => fazer o push 
 
 app.post('/alunos',(req, res)=>{
     const nome = req.body.nome
