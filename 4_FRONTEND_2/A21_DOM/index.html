@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title> Meu Contador Semantico</title>
+</head>
+<body>
+
+    <header>
+        <h1>Contador</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="inicio">
+            <h1>Contador De Presença</h1>
+            <p> Para começar a aula precisamos de 10 pessoas</p>
+        </section>
+
+        <section id="sobre">
+            <h2 class="destaque">Pessoas Estudantes Presentes</h2>
+            <span id="contador"> 0 </span>
+            <button onclick= "addEstudante()" > Adicionar presença</button>
+            <button onclick="removeEstudante()"> Retirar presença</button>
+
+            <div>
+                <p> Espere por mais pessoas para começar</p>
+                <p id="meu-paragrafo" >Este é um parágrafo.</p>
+                <p class="destacado">Este é um parágrafo destacado.</p>
+            </div>
+
+        </section>
+        
+        <section>
+            <h2 id="title">Mexendo com Atributos </h2>
+            <p id="class"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div id="minhaDiv" data-info="Informação importante">Conteúdo da Div</div>
+        <p id="infoExibida"></p>
+        <p id="usando-set"> Aqui é uma classe setada </p>
+        <p id="ifo-footer">&copy; 2024 Copyright. Todos os <strong>direitos reservados</strong></p>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
