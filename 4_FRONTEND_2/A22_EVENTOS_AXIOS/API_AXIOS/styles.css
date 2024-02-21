@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f5f5f5;
+}
+  
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+  
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+  
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.user-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.user-card img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem
+}
+  
+.user-card p {
+    margin: 0.5rem 0;
+    color: #666;
+}

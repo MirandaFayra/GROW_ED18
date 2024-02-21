@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="meuBotao" onclick="eventoOnclick()">Clique em mim</button>
+
+    <button id="botao-escutado" >Clique em mim</button>
+
+    <div id="minha-div" onmouseover="mudarCor()" onmouseout="voltaCor()">Passe o mouse sobre mim</div>
+
+    <input type="text" id="minhaEntrada" onkeyup="mostrarTeclaSolta(event)" onkeydown="mostrarTeclaPressionada(event)">
+    <p id="infoTecla"></p>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
