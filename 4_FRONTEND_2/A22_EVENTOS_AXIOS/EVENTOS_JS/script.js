@@ -1,6 +1,26 @@
 
 //-------- ONCLICK ---------
 
+/*
+Funcao Normal 
+
+function nomeFuncao(){
+
+}
+ -------
+Arrow Function
+
+let escopoGlobal = true
+
+const nomeFuncao =()=>{
+    let escopoLocal = false
+}
+
+console.log(escopoLocal)
+
+*/ 
+
+
 const eventoOnclick =()=>{
     document.getElementById('meuBotao')
     alert('Botão clicado!');
@@ -23,6 +43,7 @@ const eventoListener =()=>{
 }
 
 eventoListener()
+
 
 //--------------- ON MOUSE HOUVER ------
 
