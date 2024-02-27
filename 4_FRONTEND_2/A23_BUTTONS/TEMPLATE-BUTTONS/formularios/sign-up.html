@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Growdev - Formulários</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="flex-center">
+      <div class="wrapper">
+        <h1>Growdev</h1>
+        <h3>Front-end II / Formulários</h3>
+      </div>
+    </main>
+    <section class="flex-center">
+      <div class="wrapper">
+        <div>
+          <h2>Formulários</h2>
+          <p>Programa Starter Web Full-Stack</p>
+        </div>
+        <div>
+          <form id="formulario-cadastro">
+            <fieldset>
+              <legend>Dados Pessoais</legend>
+
+              <label for="nome"> Nome Completo</label>
+              <input
+                type="text"
+                name=" nome"
+                id="nome"
+                placeholder="Digite o seu nome"
+                required
+              />
+              <br />
+
+              <label for="idade"> Idade: </label>
+              <input type="number" name="idade" id="idade" required min="18" />
+
+              <br />
+
+              <label for="email"> Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                placeholder="email@email.com"
+                required
+              />
+
+              <br />
+
+              <label for="telefone"> Whatsapp: </label>
+              <input
+                type="tel"
+                id="telefone"
+                placeholder="55 11 99999 9999 "
+                
+                required
+              />
+
+              <br />
+
+              <label for="endereco"> Endereço Completo : </label>
+              <input
+                type="text"
+                id="endereco"
+                placeholder="Rua: Dos Bobos , número 0 , apt - Bairro - Cidade - Estado "
+                required
+              />
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Conhecimentos</legend>
+            <div>
+                <label for="devweb"> Escolha uma área :</label>
+              <br />
+              <input type="radio" name="devweb" value="front-end" />
+
+              Front-end
+
+              <input type="radio" name="devweb" value="back-end" />
+
+              Backend-end
+
+              <input type="radio" name="devweb" value="full-stack" />
+
+              Full-stack
+            </div>
+
+            <div>
+              <br />
+              <label> Selecione sua Senioriedade</label>
+              <select name="senioridade" id="senioridade">
+                <option value="">Selecione uma opção</option>
+                <option value="juniore">Pessoa dev Jr</option>
+                <option value="plena">Pessoa dev Plena</option>
+                <option value="senior">Pessoa dev Sênior</option>
+              </select>
+            </div>
+
+            <br />
+
+            <div>
+              <label>Selecione as tecnologias</label>
+              <br />
+
+              <input
+                type="checkbox"
+                name="tecnologia"
+                id="tecnologia1"
+                value="html"
+              />
+              <label for="tecnologia1">HTML</label>
+
+              <input
+                type="checkbox"
+                name="tecnologia"
+                id="tecnologia2"
+                value="CSS"
+              />
+              <label for="tecnologia2">CSS</label>
+
+              <input
+                type="checkbox"
+                name="tecnologia"
+                id="tecnologia3"
+                value="JavaScript"
+              />
+              <label for="tecnologia3">JavaScript</label>
+
+              <input
+                type="checkbox"
+                name="tecnologia"
+                id="tecnologia4"
+                value="Phyton"
+              />
+              <label for="tecnologia4">Phyton</label>
+
+              <input
+                type="checkbox"
+                name="tecnologia"
+                id="tecnologia5"
+                value="Typescript"
+              />
+              <label for="tecnologia5">Typescript</label>
+
+              <input
+                type="checkbox"
+                name="tecnologia"
+                id="tecnologia6"
+                value="React"
+              />
+              <label for="tecnologia6">React</label>
+            </div>
+
+            <div>
+                <br/>
+                <label>Conte-nos sobre a sua experiência :</label>
+                <textarea 
+                    id="experiencia" 
+                    name="experiencia" 
+                    rows="6" 
+                    cols="100"
+                >
+                </textarea>
+            </div>
+
+            <br/>
+
+            <div>
+                <label for="curriculo"> Insira o seu Currículo</label>
+                <input
+                    type="file"
+                    name="curriculo"
+                    id="curriculo"
+                    accept=".doc,.docx,.pdf"
+                />
+
+            </div>
+        </fieldset>
+            <input 
+                type="submit"
+                id="salvar"
+                value="concluido"
+                name="concluido"
+            > 
+            </input>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
