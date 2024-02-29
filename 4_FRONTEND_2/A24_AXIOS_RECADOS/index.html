@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listar Mensagem</title>
+
+
+</head>
+
+<body>
+  <header>
+    <h1></h1>
+  </header>
+
+  <main>
+    
+    <form > 
+        <fieldset>
+            <legend>Ler Mensagem</legend>
+        <label for="emailInput">Email:</label>
+        <input 
+            type="email" 
+            id="emailInput" 
+            name="emailInput" 
+            required
+        />
+        <br>
+
+            <button
+
+            type="submit"
+            onclick="getMessages(event)"
+            >
+            Ler Mensagem
+
+            </button>
+        
+        </fieldset>
+    </form>
+
+   
+
+    <form id="createMessageForm"> 
+        <fieldset>
+            <legend>Criar Mensagem</legend>
+        <label for="createEmail">Email:</label>
+        <input 
+            type="email" 
+            id="createEmail" 
+            name="createEmail" 
+            required
+        />
+        <br>
+
+        <label for="createTitle">Título da Mensagem:</label>
+
+        <input 
+            type="text" 
+            id="createTitle" 
+            name="createTitle" 
+            required
+        >
+        <br>
+
+        <label for="createDescription">Descrição da Mensagem:</label>
+
+        <input 
+            type="text" 
+            id="createDescription" 
+            name="createDescription" 
+            required
+        >
+        <br>
+
+        <button
+
+            type="submit"
+            onclick="createMessage(event)"
+            >
+            Criar Mensagem
+        </button>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Atualizar Mensagem</legend>
+
+            <label for="updateId">Mensagem Id:</label>
+            <input 
+                type="text" 
+                id="updateId" 
+                name="updateId" 
+                required
+            />
+            <br>
+            
+            <label for="updateTitle">Título da Mensagem:</label>
+
+            <input 
+                type="text" 
+                id="updateTitle" 
+                name="updateTitle" 
+                required
+            >
+            <br>
+
+            <label for="updateDescription">Descrição da Mensagem:</label>
+
+            <input 
+                type="text" 
+                id="updateDescription" 
+                name="updateDescription" 
+                required
+            >
+
+            <button
+                type="submit"
+                onclick="atualizarMensagem(event)"
+                >
+                Atualizar Mensagem
+            </button>
+
+            
+        </fieldset>
+    </form>
+
+
+    <form>
+        <fieldset>
+            <legend>Apagar Mensagem</legend>
+
+            <label for="apagarId">Mensagem Id:</label>
+            <input 
+                type="text" 
+                id="apagarId" 
+                name="apagarId" 
+                required
+            />
+            <br>
+            <button
+                type="submit"
+                onclick="deletarMensagem(event)"
+                >
+                Deletar Mensagem
+            </button>
+        </fieldset>
+
+    </form>
+
+    <div id="respostaRequisicao"></div>
+    <div id="messagesContainer"></div>
+    <div id="updateRequisicao"></div>
+    <div id="deleteRequisicao"></div>
+
+   
+  </main>
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./api.js"></script>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
