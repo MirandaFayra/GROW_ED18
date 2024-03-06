@@ -1,0 +1,36 @@
+let nomeProduto 
+let precoProduto 
+let novoPreco = 20
+let novoNome = 'Camiseta'
+let nomeProdutoAtualizar = 'Bananinha'
+let precoProdutoAtualizar 
+
+let listaProdutos = []
+
+let novoProduto = {
+    nomeProduto: 'Bananinha',
+    precoProduto: 10
+}
+
+listaProdutos.push(novoProduto)
+
+if (listaProdutos.length > 0) {
+    const produtoEncontrado = listaProdutos.find((produto) => produto.nomeProduto === nomeProdutoAtualizar);
+
+    if (produtoEncontrado) {
+        produtoEncontrado.nomeProduto = novoNome
+        produtoEncontrado.precoProduto = novoPreco
+
+        console.log("Produto atualizado:");
+
+    } else {
+        console.log(`Produto "${nomeProdutoAtualizar}" não encontrado.`)
+    }
+
+    listaProdutos.forEach((produto) => {
+        console.log(`Nome: ${produto.nomeProduto}, Preço: ${produto.precoProduto}`)
+    })
+
+} else {
+    console.log('Estoque vazio, insira um produto para pesquisar')
+}
