@@ -1,0 +1,80 @@
+let nomeProduto 
+let precoProduto 
+let novoPreco = 20
+let novoNome = 'Camiseta'
+let nomeProdutoAtualizar = 'Bananinha'
+let precoProdutoAtualizar 
+
+let listaProdutos = []
+
+let novoProduto = {
+    nomeProduto: 'Bananinha',
+    precoProduto: 10
+}
+
+listaProdutos.push(novoProduto)
+
+
+function criarProduto(nome, preco) {
+    const novoProduto = {
+        nomeProduto: nome,
+        precoProduto: preco
+    }
+    listaProdutos.push(novoProduto)
+    console.log(`Produto "${nome}" criado com sucesso.`);
+}
+
+//criarProduto('Computador', 10000 )
+
+
+function atualizarProduto(nomeProdutoAtualizar , novoNome, novoPreco) {
+    
+    console.log(listaProdutos)
+    const produtoEncontrado = listaProdutos.find((produto) => produto.nomeProduto === nomeProdutoAtualizar )
+
+    console.log(produtoEncontrado)
+
+    if (produtoEncontrado) {
+        produtoEncontrado.nomeProduto = novoNome
+        produtoEncontrado.precoProduto = novoPreco
+        console.log(`Produto "${nomeProdutoAtualizar }" atualizado com sucesso.`)
+    } else {
+        console.log(`Produto "${nomeProdutoAtualizar }" não encontrado.`)
+    }
+}
+
+//atualizarProduto('Bananinha', 'Flor', 20)
+
+
+function lerTodosProdutos() {
+    if (listaProdutos.length > 0) {
+        console.log("Lista de todos os produtos:");
+        listaProdutos.forEach((produto) => {
+            console.log(`Nome: ${produto.nomeProduto}, Preço: ${produto.precoProduto}`)
+        })
+    } else {
+        console.log('Estoque vazio.')
+    }
+}
+
+lerTodosProdutos()
+
+
+
+function deletarProduto(nome) {
+    const indexDoProduto = listaProdutos.findIndex((produto) => produto.nomeProduto === nome)
+
+    if (indexDoProduto !== -1) {
+        listaProdutos.splice(indexDoProduto, 1)
+        console.log(`Produto "${nome}" deletado com sucesso.`)
+    } else {
+        console.log(`Produto "${nome}" não encontrado.`)
+    }
+}
+
+
+deletarProduto('Bananinha')
+
+
+
+

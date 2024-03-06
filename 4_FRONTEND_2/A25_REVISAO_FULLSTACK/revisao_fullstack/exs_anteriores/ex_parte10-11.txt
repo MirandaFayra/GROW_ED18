@@ -1,0 +1,70 @@
+import express from 'express'
+import cors  from 'cors'
+
+const app = express()
+app.use(cors())
+
+app.use(express.json())
+
+app.get('/', (request, response) => {
+return response.json('OK')
+})
+
+let nomeProduto 
+let precoProduto 
+let novoPreco 
+let novoNome 
+let nomeProdutoAtualizar 
+let precoProdutoAtualizar 
+
+let listaProdutos = []
+
+app.post('/criar-produto', (request, response) => {
+    const { nomeProduto, precoProduto } = request.body
+
+    try {
+
+        if (!nomeProduto ) {
+            return response.status(400).send({ mensagem: 'O nome do produto deve ser passado.' })
+        }
+    
+        if(!precoProduto){
+            return response.status(400).send({ mensagem: 'O preço do produto deve ser passado.' })
+        }
+    
+        const novoProduto = {
+            nomeProduto: nomeProduto,
+            precoProduto: parseInt(precoProduto)
+        }
+    
+        listaProdutos.push(novoProduto)
+    
+        response.status(201).send({ mensagem: 'Produto criado com sucesso', listaProdutos })
+        
+    } catch (error) {
+        response.status(500).send({ mensagem: 'Erro interno'})
+    }
+
+})
+
+
+app.get('/produtos', (request, response) => {
+    try {
+        if (listaProdutos.length > 0) {
+
+            listaProdutos.map((produto) => {
+                return { nomeProduto: produto.nomeProduto, precoProduto: produto.precoProduto }
+            })
+
+            response.status(200).send({ mensagem:listaProdutos })
+        } else {
+            response.status(200).send({ mensagem: 'Lista vazia' })
+        }
+    } catch (error) {
+        console.error(error)
+        response.status(500).send({ mensagem: 'Erro interno' })
+    }
+})
+
+
+app.listen(8080, () => console.log("Servidor iniciado na porta 8080"))
