@@ -15,6 +15,7 @@
     "sucrase": "^3.35.0"
   },
   "dependencies": {
-
+    "cors": "^2.8.5",
+    "express": "^4.18.3"
   }
 }
