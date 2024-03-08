@@ -1,5 +1,7 @@
 /*
 
+link deploy : https://api-revisao-fullstack.onrender.com
+
 1. Cria o elemento, e armaneza os dados => POST => Passa parametro (body)
 
 2.  Olhar os dado sarmazenados e ler esses dados => GET => recebe parametro lendo recurso especifico ou pegando um resultado filtrado de uma informacao 
@@ -82,7 +84,94 @@ app.get('/produtos', (request, response) => {
 
 //-------- ATULIZAR (PUT) ---- 
 
+/* 
+
+muda no postman e coloca o ?oparametro
+
+app.put('/produtos',(request, response)=>{
+    const nomeProdutoAtualizado = request.query.nomeProdutoAtualizado
+    const nomeProduto= request.body.nomeProduto
+    const precoProduto = request.body.precoProduto
+
+    try {
+       const indiceProdutoBuscado = listaProdutos.findIndex ((produto)=>
+        produto.nomeProduto === nomeProdutoAtualizado)
+
+        if(indiceProdutoBuscado === -1){
+           return response.status(404).send({message:'Produto não encontrado'})
+        }
+
+        const novoProduto ={
+            nomeProduto,
+            precoProduto
+        }
+
+        listaProdutos[indiceProdutoBuscado] = novoProduto
+        response.status(201).send({message:'Produto atualizado com sucesso',dat:listaProdutos})
+
+        
+    } catch (error) {
+        response.status(500).send({message:'Erro interno'})
+    }
+})
+
+
+*/
+
+app.put('/produtos/:nomeProdutoAtualizado',(request, response)=>{
+    const nomeProdutoAtualizado = request.params.nomeProdutoAtualizado
+    const nomeProduto= request.body.nomeProduto
+    const precoProduto = request.body.precoProduto
+
+    try {
+       const indiceProdutoBuscado = listaProdutos.findIndex ((produto)=>
+        produto.nomeProduto === nomeProdutoAtualizado)
+
+        if(indiceProdutoBuscado === -1){
+           return response.status(404).send({message:'Produto não encontrado'})
+        }
+
+        const novoProduto ={
+            nomeProduto,
+            precoProduto
+        }
+
+        listaProdutos[indiceProdutoBuscado] = novoProduto
+        response.status(201).send({message:'Produto atualizado com sucesso',dat:listaProdutos})
+
+        
+    } catch (error) {
+        response.status(500).send({message:'Erro interno'})
+    }
+})
+
 //------- DELETAR (DELETE) -------
+
+app.delete('/produtos/:nomeProdutoDeletado',(request, response)=>{{
+    const nomeProdutoDeletado = request.params.nomeProdutoDeletado
+
+    try {
+
+        if(!nomeProdutoDeletado){
+            return response.status(404).send({message:'Passe um nome de produto válido'})
+        }
+
+        const indiceProdutoBuscado = listaProdutos.findIndex ((produto)=>
+        produto.nomeProduto === nomeProdutoDeletado)
+
+        if(indiceProdutoBuscado === -1){
+            return response.status(404).send({message:'Produto não encontrado'})
+        }
+
+        listaProdutos.splice(indiceProdutoBuscado,1)
+
+        response.status(200).send({message:'Produto delatado com sucesso'})
+        
+    } catch (error) {
+        response.status(500).send({message:'Erro interno'})
+    }
+}})
+
 
 //------- VERIFICAR API  -------
 
