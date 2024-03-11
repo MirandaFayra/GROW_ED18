@@ -73,6 +73,9 @@ function deletarProduto(nome) {
 }
 
 
+
+
+
 deletarProduto('Bananinha')
 
 

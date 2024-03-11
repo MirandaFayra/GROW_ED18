@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+
+</head>
+
+<body>
+  <main>
+    
+
+    <form>
+        <fieldset>
+            <legend>Login</legend>
+            
+            <label for="emailPessoaUsuaria">Email</label>
+
+            <input 
+                type="email" 
+                id="emailPessoaUsuaria-id" 
+                name="emailPessoaUsuaria" 
+                required
+            >
+            <br>
+
+            <label for="senhaPessoaUsuaria">Senha:</label>
+
+            <input 
+                type="password" 
+                id="senhaPessoaUsuaria-id" 
+                name="senhaPessoaUsuaria" 
+                required
+            >
+
+            <button
+                type="submit"
+                onclick="logarUsuario(event)"
+                >
+                Login
+            </button>
+
+
+            
+        </fieldset>
+    </form>
+  
+    <div id="login"></div>
+
+
+
+
+   
+  </main>
+
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./api.js"></script>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
