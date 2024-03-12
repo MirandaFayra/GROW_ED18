@@ -29,7 +29,7 @@ const logarUsuario = async (event) => {
             ${response.data.message} </p>
         `
 
-        window.location.href= "./atv_login/home.html"
+        window.location.href= "/atv_login/home.html"
 
         localStorage.removeItem('usuarioLogado')
 
