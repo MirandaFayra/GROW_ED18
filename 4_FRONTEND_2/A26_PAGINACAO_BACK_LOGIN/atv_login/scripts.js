@@ -20,7 +20,7 @@ const logarUsuario = async (event) => {
 
         const response = await api.put('login', usuarioSalvo )
 
-        console.log(` A requisicao deu certo ${response.data.message}`)
+        //console.log(` A requisicao deu certo ${response.data.message}`)
 
         mensagemResposta.innerHTML = `
             <p> A requisicao deu certo 
