@@ -1,0 +1,4 @@
+const fazerPaginacao = async (page) => {
+  
+}
+
