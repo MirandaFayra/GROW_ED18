@@ -1,0 +1,22 @@
+app.get('/massage', (req, res) => {
+    try {
+        const limit = parseInt(req.query.limit);
+        const offset = parseInt(req.query.offset)
+
+        const positivePageCheck = (offset - 1) * limit;
+
+        const paginatedMessages = messages.slice(positivePageCheck, positivePageCheck + limit);
+
+        res.status(201).json({
+            sucess: true,
+            data: paginatedMessages,
+            message: "Produtos retornados com sucesso",
+            totalMessages: messages.length,
+            currentPage: Math.floor(positivePageCheck / limit) + 1,
+            totalPages: Math.ceil(messages.length / limit),
+            limitByPage: limit
+        })
+    } catch (error) {
+        res.status(500).json({ message: "Erro interno" });
+    }
+})
